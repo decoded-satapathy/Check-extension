@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Checkbox Checker",
+  "version": "1.1",
+  "description": "Checks all checkboxes on the current page via a shortcut or a popup button.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "icons": {
+    "128": "icons/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png"
+    },
+    "default_title": "Checkbox Checker",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "check_all": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+A"
+      },
+      "description": "Check all checkboxes on the page"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "checkbox-checker@example.com"
+    }
+  }
+}
